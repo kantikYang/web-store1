@@ -94,9 +94,6 @@ textarea {
     background: #293449;
     color: #FFFFFF;
     height: 42px;
-
-    display: flex;
-    flex-direction: row;
     justify-content: center;
 }
 
@@ -113,6 +110,11 @@ textarea {
     color: #F1F5F7;
 }
 
+.top-menu{
+    display: flex;
+    flex-direction: row;
+}
+
 .logo {
     width: 220px;
     height: 47px;
@@ -120,7 +122,7 @@ textarea {
     background: #ee3643;
     border-bottom: 5px solid #b52933;
     text-align: center;
-    padding: 12px 57px 17px 55px;
+    padding: 12px 57px 12px 55px;
     margin-left: 130px
 }
 
@@ -280,11 +282,19 @@ textarea {
 }
 
 .header-item._bookmark:active {
-    background-color: #161D29
+    background: url(../images/icon/icon-bookmark.png);
+    background-repeat: no-repeat;
+    background-position-y: 13px;
+    background-position-x: 20px;
+    background-color: #161D29;
 }
 
 .header-item._cart:active {
-    background-color: #161D29
+    background: url(../images/icon/icon-cart.png);
+    background-repeat: no-repeat;
+    background-position-y: 13px;
+    background-position-x: 20px;
+    background-color: #161D29;
 }
 
 .header-item._order:active {
@@ -434,7 +444,7 @@ ul.nav__list li:hover {
     color: #ffffff;
 }
 
-.info-board {
+.top-footer {
     height: 193px;
     background-color: #32425C;
 }
@@ -442,6 +452,11 @@ ul.nav__list li:hover {
 .low-footer {
     height: 107px;
     background: #293449;
+}
+
+.info-board{
+    display: flex;
+    flex-direction: row;
 }
 
 .logo._footer {
@@ -508,6 +523,11 @@ ul.info-board__above li:hover {
 
 ul.info-board__under li:hover {
     border-bottom: 1px solid #FFD180;
+}
+
+.low-footer__contact{
+    display: flex;
+    flex-direction: row;
 }
 
 .low-footer__about {
