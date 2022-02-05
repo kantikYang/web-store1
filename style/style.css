@@ -398,7 +398,8 @@ ul.nav__list li {
     justify-content: center;
     flex-grow: 1;
 }
-ul.nav__list a{
+
+ul.nav__list a {
     padding: 16px 0px 20px 0px;
 }
 
@@ -560,6 +561,8 @@ ul.nav__list li:active {
     height: 40px;
     position: absolute;
     top: 122px;
+    display: flex;
+    z-index: 2;
 }
 
 .arrow-btn__back {
@@ -578,9 +581,15 @@ ul.nav__list li:active {
     font-size: 40px;
 }
 
-.swiper.swiper-pagination-bullet-active {
-background-color: #EE3643;
+.swiper .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #EE3643;
+    border: 2px solid #fff;
+    border-radius: 50%;
+   
 }
+
 .slider-nav {
     position: absolute;
     bottom: 36px;
