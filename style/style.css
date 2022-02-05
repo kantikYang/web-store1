@@ -394,10 +394,12 @@ body {
 }
 
 ul.nav__list li {
-    padding: 16px 0px 20px 0px;
     display: flex;
     justify-content: center;
     flex-grow: 1;
+}
+ul.nav__list a{
+    padding: 16px 0px 20px 0px;
 }
 
 ul.nav__list li:hover {
@@ -570,6 +572,15 @@ ul.nav__list li:active {
     background: url(../images/icon/b-right.svg) no-repeat;
 }
 
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    color: #fff;
+    font-size: 40px;
+}
+
+.swiper.swiper-pagination-bullet-active {
+background-color: #EE3643;
+}
 .slider-nav {
     position: absolute;
     bottom: 36px;
@@ -600,21 +611,18 @@ ul.nav__list li:active {
 
 .content-header {
     height: 89px;
+    padding: 0 19px 0 25px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #F9F5F0;
     color: #32425C;
 }
 
 .main-title {
-    margin-top: 29px;
-    margin-left: 28px;
     font-weight: 400;
     font-size: 30px;
-}
-
-.btn._product {
-    margin-top: 24px;
-    margin-left: 442px;
+    text-transform: uppercase;
 }
 
 .product-list {
@@ -744,10 +752,7 @@ ul.product-list li:hover .product-menu {
 
 
 
-.btn._brand {
-    margin-top: 25px;
-    margin-left: 334px;
-}
+
 
 .brand__list {
     display: flex;
@@ -778,13 +783,15 @@ ul.product-list li:hover .product-menu {
     height: 522px;
     background-color: #f1f5f7;
     margin-top: 70px;
+    margin-bottom: 70px;
 }
 
 .container {}
 
-.service__top {}
-
-.main-title {}
+.service__top {
+    padding-top: 64px;
+    margin-bottom: 67px;
+}
 
 .text {
     font-family: "PT Sans";
@@ -795,6 +802,10 @@ ul.product-list li:hover .product-menu {
     color: #000000;
 }
 
+.text._service {
+    margin: 25px 0 67px 0;
+}
+
 .service__bottom {
     display: flex;
 }
@@ -802,6 +813,58 @@ ul.product-list li:hover .product-menu {
 .service__menu {}
 
 .service__shipping {}
+
+
+
+
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 70px;
+}
+
+.text._top {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.company-list {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+
+ul.company-list li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 37px;
+}
+
+ul.company-list li::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background-color: #EE3643;
+    left: 0px;
+    top: 12px;
+}
+
+.text._map {
+    margin-top: 24px;
+    margin-bottom: 32px;
+}
+
+.btn._map {
+    width: 300px;
+    margin-top: 25px;
+}
+
+
+
+
+
 
 
 
