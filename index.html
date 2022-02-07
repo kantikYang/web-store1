@@ -208,17 +208,35 @@
                         Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
                 </div>
                 <div class="service__bottom">
-                    <ul class="service__menu">
-                        <li><a href="#"> Доставка </a></li>
-                        <li><a href="#"> Гарантия </a></li>
-                        <li><a href="#"> Кредит </a></li>
-                    </ul>
-                    <div class="service__shipping">
-                        <h2 class="main-title">Доставка</h2>
-                        <p class="text">Мы с удовольствием доставим ваш товар прямо
-                            к вашему подъезду совершенно бесплатно!
-                            Ведь мы неплохо заработаем,
-                            поднимая его на ваш этаж!</p>
+                    <div class="nav-tabs">
+                        <a href="#" data-tab="1" class="nav-tab active">Доставка</a>
+                        <a href="#" data-tab="2" class="nav-tab">Гарантия</a>
+                        <a href="#" data-tab="3" class="nav-tab">Кредит</a>
+                    </div>
+                    <div class="tab-content">
+                        <div data-tab-content="1" class="tab-pane active _car">
+                            <h2 class="main-title">доставка</h2>
+                            <p class="text _tab">Мы с удовольствием доставим ваш товар прямо <br>
+                                к вашему подъезду совершенно бесплатно!
+                                <br>Ведь мы неплохо заработаем, <br>
+                                поднимая его на ваш этаж!
+                            </p>
+                        </div>
+                        <div data-tab-content="2" class="tab-pane _medal">
+                            <h2 class="main-title">гарантия</h2>
+                            <p class="text _tab">Если купленный у нас товар поломается или заискрит,<br> а также в
+                                случае
+                                пожара, спровоцированного его<br> возгоранием, вы всегда можете быть уверены в нашей<br>
+                                гарантии. Мы обменяем сгоревший товар на новый.<br> Дом уж восстановите как-нибудь сами.
+                            </p>
+                        </div>
+                        <div data-tab-content="3" class="tab-pane _cash">
+                            <h2 class="main-title">кредит</h2>
+                            <p class="text _tab">Залезть в долговую яму стало проще!<br>Кредитные консультанты придут
+                                вам на
+                                помощь.</p>
+                            <a href="#" class="btn _send open-popup">отправить заявку</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -249,10 +267,41 @@
                     <br>заехав в наш офис:
                 </p>
                 <img src="images/icon/map.png" alt="map">
-                <a class="btn _map ">ЗАБЛУДИЛСЬ?НАПИШИТЕ НАМ!</a>
+                <a class="btn _map open-popup">ЗАБЛУДИЛСЬ?НАПИШИТЕ НАМ!</a>
             </div>
         </div>
     </main>
+
+    <div class="popup-bg">
+        <form class="popup">
+            <div class="popup__main">
+                <img src="images/icon/close.svg" class="close-popup">
+                <div class="popup__top">
+                    <label>
+                        <div class="label__text">
+                            Ваше имя:
+                        </div>
+                        <input class="popup__input" placeholder="Имя Фамилия" type="text" name="name">
+                    </label>
+                    <label>
+                        <div class="label__text">
+                            Ваш e-mail:
+                        </div>
+                        <input class="popup__input" placeholder="email@example.com" type="mail" name="mail">
+                    </label>
+                </div>
+                <label>
+                    <div class="label__text">
+                        Текст письма:
+                    </div>
+                    <textarea class="popup__textarea" placeholder="В свободной форме" name="message"></textarea>
+                </label>
+            </div>
+            <div class="popup__footer">
+                <button class="btn _popup" type="submit">Отправить</button>
+            </div>
+        </form>
+    </div>
 
     <footer class="footer">
         <div class="top-footer">
