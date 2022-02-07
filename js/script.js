@@ -52,11 +52,13 @@ openPopupButtons.forEach((button) => {
 });
 closePopupButton.addEventListener('click',() => { 
   popupBg.classList.remove('active'); 
-  popup.classList.remove('active'); 
+  popup.classList.remove('active');
+  document.body.style.overflow = 'visible'; 
 });
 document.addEventListener('click', (e) => { 
   if(e.target === popupBg) { 
       popupBg.classList.remove('active'); 
-      popup.classList.remove('active'); 
+      popup.classList.remove('active');
+      document.body.style.overflow = 'visible'; 
   }
 });
