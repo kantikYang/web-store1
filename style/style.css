@@ -65,7 +65,7 @@ body {
 .container {
     max-width: 940px;
     margin: 0 auto;
-    width:100%;
+    width: 100%;
 }
 
 
@@ -108,7 +108,7 @@ body {
     display: flex;
 }
 
-.main-menu{
+.main-menu {
     display: flex;
 }
 
@@ -122,10 +122,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.burger-btn {
-    display: none;
 }
 
 .logo._top:active {
@@ -1631,7 +1627,7 @@ ul.cat-list {
 
 @media(max-width:949px) {
 
-    
+
 
     .header {
         height: auto;
@@ -1649,11 +1645,34 @@ ul.cat-list {
     .logo._top {
         width: 100%;
         height: 50px;
+        display: flex;
+        position: relative;
     }
 
     .logo._top svg {
         width: 150px;
     }
+
+    .burger-btn {
+        height: 100%;
+        width: 50px;
+        position: absolute;
+        right: 5px;
+        top: 0;
+        background-position-x: 5px;
+        background-image: url(../images/icon/burger-svg.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-left: 2px solid #000;
+    }
+
+    .burger-btn.active {
+        background-image: url(../images/icon/cancel_.svg);
+        background-size: 40px;
+        background-position-y: 5px;
+    }
+
+
 
     .main-menu {
         display: flex;
@@ -1752,7 +1771,8 @@ ul.cat-list {
 
     .header-item._order {
         background-color: #63A63E;
-        padding-left: 30px;
+        padding: 0;
+        justify-content: center;
     }
 
     .header-item._bookmark:hover {
@@ -1797,27 +1817,27 @@ ul.cat-list {
 
 
     .header__about {
-        flex-wrap: wrap;
         justify-content: space-around;
+        align-items: center;
     }
 
     .descrip {
-        width: 45%;
+        width: auto;
         text-align: center;
-        font-size: 1.5em;
+        font-size: 1.2em;
         line-height: 1em;
         margin: 0;
     }
 
     .header__phone {
-        width: 45%;
+        width: auto;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
 
     .phone-number {
-        font-size: 1.8em;
+        font-size: 1.5em;
         line-height: 1.5em;
         display: flex;
         justify-content: center;
@@ -1827,31 +1847,34 @@ ul.cat-list {
     }
 
     .under-phone {
-        font-size: 1.2em;
+        font-size: 1em;
     }
 
 
     .logon {
-        width: 40%;
-        height: 55px;
-        margin-top: 30px;
+        flex-direction: column;
+        width: auto;
+        height: auto;
     }
 
     .authorize {
-        width: 50%;
+        width: auto;
         height: 100%;
-        font-size: 1.8em;
+        font-size: 1.3em;
         border-radius: 5px;
+        padding: 10px;
     }
 
     .authorize._log {
-        width: 40%;
+        width: auto;
         background-color: #fff;
+        margin-bottom: 10px;
     }
 
     .authorize._log .svg-aut {
         height: 23px;
         width: 25px;
+        margin-right: 5px;
     }
 
     .authorize._log+svg {
@@ -1871,56 +1894,42 @@ ul.cat-list {
     }
 
     .nav {
-        width: 76px;
-        margin: 0 auto;
-        margin-top: 30px;
-        background-image: url(../images/icon/red-burger.png);
-        background-repeat: no-repeat;
-        background-position-x: 11px;
-        background-size: 54px;
-        border-bottom: 5px solid rgb(41, 52, 73);
-        border-radius: 10px;
+        height: 0;
+        margin: 0;
+        border-bottom: 0;
     }
 
     .nav__wrapper {
-        display: none;
+        display: flex;
         position: fixed;
         width: 100%;
         top: 0;
-        left: 0;
+        left: -100%;
         background-color: rgba(0, 0, 0, 0.5);
     }
 
     .nav__wrapper.active {
         display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .close-nav {
-        background-image: url(../images/icon/close.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        height: 25px;
-        width: 25px;
-        position: absolute;
-        top: 20%;
-        left: 85%;
+        /* justify-content: center;
+        padding: 60px;*/
+        left: 0;
     }
 
     ul.nav__list {
         flex-direction: column;
-        font-size: 1.7em;
+        font-size: 1.6em;
         padding: 0;
+        margin-left: -100%;
         height: auto;
-        width: 70%;
+        width: 50%;
         height: 55%;
         background: rgb(50, 66, 92);
         border-bottom: 10px solid rgb(41, 52, 73);
-        border-radius: 15px;
     }
 
-
+    ul.nav__list.active {
+        margin-left: 0;
+    }
 
 
 
@@ -1954,8 +1963,8 @@ ul.cat-list {
 
     .info-board__adres {
         padding-top: 10px;
-        padding-right: 25px;
-        font-size: 1.2em;
+        padding-right: 45px;
+        font-size: 1.1em;
         line-height: 1.3em;
         display: flex;
         flex-direction: column;
@@ -1972,7 +1981,7 @@ ul.cat-list {
     .info-board__list {
         width: 80%;
         margin: 0;
-        font-size: 1.3em;
+        font-size: 1.1em;
         line-height: 1em;
     }
 
@@ -2058,6 +2067,7 @@ ul.cat-list {
 
     .header {
         /*position: static;*/
+        padding-bottom: 30px;
     }
 
     .header__top {
@@ -2174,7 +2184,7 @@ ul.cat-list {
 
     .header-item._order {
         background-color: #63A63E;
-        padding: 15px 0 15px 50px;
+        padding: 15px 0 15px 0px;
     }
 
     .header-item._bookmark:hover {
@@ -2226,7 +2236,7 @@ ul.cat-list {
         margin: 0;
         margin-top: 30px;
         width: 85%;
-        font-size: 1.6em;
+        font-size: 1.4 em;
         line-height: 1em;
         display: flex;
         justify-content: center;
@@ -2258,7 +2268,8 @@ ul.cat-list {
     .logon {
         width: 75%;
         margin-top: 30px;
-        height: 64px;
+        height: auto;
+        flex-direction: row;
     }
 
     .authorize {
@@ -2274,24 +2285,15 @@ ul.cat-list {
     .authorize._log {
         width: 40%;
         padding-right: 5%;
-    }
-
-    .close-nav {
-        background-image: url(../images/icon/icon-close.svg);
-        background-repeat: no-repeat;
-        height: 21px;
-        width: 21px;
-        position: absolute;
-        top: 16.5%;
-        left: 88.5%;
+        margin: 0;
     }
 
     ul.nav__list {
         flex-direction: column;
-        font-size: 1.7em;
+        font-size: 1.2em;
         padding: 0;
         height: auto;
-        width: 75%;
+        width: 65%;
         height: 60%;
         background: rgb(50, 66, 92);
         border-bottom: 10px solid rgb(41, 52, 73);
@@ -2353,7 +2355,7 @@ ul.cat-list {
     .info-board__adres {
         margin-top: 30px;
         font-size: 0.9em;
-        line-height: 1em;
+        line-height: 1.3em;
         padding: 0;
     }
 
@@ -2367,11 +2369,11 @@ ul.cat-list {
     ul.info-board__list {
         flex-direction: column;
         width: 35%;
+        font-size: 1.1em;
     }
 
     ul.info-board__list li {
         text-align: center;
-        font-size: 0.8em;
     }
 
     ul.info-board__list._yellow {
@@ -2392,15 +2394,13 @@ ul.cat-list {
 
     .low-footer__about {
         text-align: center;
-        font-size: 1em;
+        font-size: 0.8em;
         line-height: 1em;
         width: 60%;
         height: 30%;
     }
 
-    .contact {
-        
-    }
+    .contact {}
 
     .contact a {
         width: 60px;
@@ -2414,6 +2414,7 @@ ul.cat-list {
 
     .creator {
         width: 85%;
+        font-size: 0.9em;
         margin: 0 auto;
     }
 

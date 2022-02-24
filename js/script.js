@@ -65,18 +65,25 @@ document.addEventListener('click', (e) => {
 
 let navBg = document.querySelector('.nav__wrapper');
 let nav = document.querySelector('.nav__list');
-let openNav = document.querySelector('.nav');
-let closeNav = document.querySelector('.close-nav');
+let openNav = document.querySelector('.burger-btn');
+//let closeNav = document.querySelector('.close-nav');
+let navMenu = document.querySelector('.nav__list')
+
+document.querySelector(".nav__list").style.transition ="0.7s all";
 
 openNav.addEventListener('click', ()=> {
   navBg.classList.add('active');
+  openNav.classList.add('active');
+  navMenu.classList.add('active');
   document.body.style.overflow = 'hidden';
 })
 
 document.addEventListener('click', (event)=> {
   console.log(event.target);
-  if ((event.target  ==  closeNav) || (event.target  ==  navBg)) {
+  if /*((event.target  ==  openNav) || */(event.target  ==  navBg) {
     navBg.classList.remove('active');
+    openNav.classList.remove('active');
+    navMenu.classList.remove('active');
     document.body.style.overflow = 'visible';
   }
 })
