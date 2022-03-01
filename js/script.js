@@ -69,21 +69,24 @@ let openNav = document.querySelector('.burger-btn');
 //let closeNav = document.querySelector('.close-nav');
 let navMenu = document.querySelector('.nav__list')
 
-document.querySelector(".nav__list").style.transition ="0.7s all";
 
-openNav.addEventListener('click', ()=> {
-  navBg.classList.add('active');
-  openNav.classList.add('active');
-  navMenu.classList.add('active');
-  document.body.style.overflow = 'hidden';
-})
+document.querySelector(".nav__list").style.transition = "0.5s all";
+document.querySelector(".burger-btn").style.transition = "0.2s all";
 
-document.addEventListener('click', (event)=> {
+navBg.addEventListener('click', (event) => {
   console.log(event.target);
-  if /*((event.target  ==  openNav) || */(event.target  ==  navBg) {
+  if /*((event.target == openNav) || */(event.target == navBg) {
     navBg.classList.remove('active');
-    openNav.classList.remove('active');
+    openNav.classList.toggle('active');
     navMenu.classList.remove('active');
-    document.body.style.overflow = 'visible';
+    /*document.body.style.overflow = 'visible';*/
   }
 })
+
+openNav.addEventListener('click', () => {
+  navBg.classList.toggle('active');
+  openNav.classList.toggle('active');
+  navMenu.classList.toggle('active');
+  /*document.body.style.overflow = 'hidden';*/
+})
+
