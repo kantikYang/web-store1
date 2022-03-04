@@ -13,7 +13,7 @@ const swiper = new Swiper('.swiper', {
     clickable: true,
   },
 });
-/*
+
 var tabNavs = document.querySelectorAll(".nav-tab");
 var tabPanes = document.querySelectorAll(".tab-pane");
 
@@ -60,7 +60,7 @@ document.addEventListener('click', (e) => {
     popupBg.classList.remove('active');
     document.body.style.overflow = 'visible';
   }
-});*/
+});
 
 
 let navBg = document.querySelector('.nav__wrapper');

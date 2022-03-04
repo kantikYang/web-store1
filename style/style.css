@@ -850,7 +850,7 @@ ul.product-list li:hover .product-menu {
 }
 
 .service {
-    height: 522px;
+    padding-bottom: 46px;
     background-color: #f1f5f7;
     margin-top: 70px;
     margin-bottom: 70px;
@@ -920,31 +920,24 @@ ul.product-list li:hover .product-menu {
 
 }
 
-.tab-pane._car {
-    background: url(../images/icon/ship_car.png) no-repeat 140px 23px;
+.tab-pane {
+    position: relative;
+    display: none;
+    width: 600px;
+    height: 283px;
+    margin-left: 80px;
 }
 
-.tab-pane._medal {
-    background: url(../images/icon/medal.svg) no-repeat 200px 23px;
+.tab-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
-
-.tab-pane._cash {
-    background: url(../images/icon/cash.svg) no-repeat 140px 23px;
-}
-
 
 .text._tab {
-
     margin-top: 30px;
     font-size: 13px;
     line-height: 24px;
-}
-
-.tab-pane {
-    display: none;
-    width: 619px;
-    height: 283px;
-    margin-left: 80px;
 }
 
 .btn._send {
@@ -1179,7 +1172,7 @@ ul.info-board__list._yellow li:active {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: rgba(0, 0, 0, 0.5);
     opacity: 0;
     pointer-events: none;
@@ -2006,6 +1999,31 @@ ul.cat-list {
 
 
 
+    .service__top {}
+
+    .service__bottom {}
+
+    .tab-img {
+        position: static;
+    }
+
+    .tab-pane {
+        width: auto;
+        height: auto;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2350,8 +2368,8 @@ ul.cat-list {
 
     .authorize {
 
-        height: 70px;
-        font-size: 1.5em;
+        height: 50px;
+        font-size: 1.3em;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -2465,65 +2483,6 @@ ul.cat-list {
         margin-right: 0;
     }
 
-    /*.slide-block {
-        width: 150px;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .slide-block__btn {
-        width: 120px;
-        height: 30px;
-        font-size: 14px;
-        line-height: 18px;
-        margin-bottom: 10px;
-        margin-left: 0px;
-        padding: 6px 0;
-    }
-
-    .slide__name {
-        margin-top: 10px;
-        margin-left: 0px;
-        font-size: 1.3em;
-        font-weight: 700;
-    }
-
-    .slide-block._y-bucket {
-        background: url(../images/icon/bucket.svg) no-repeat 50px 35px,
-            url(../images/icon/new.svg) no-repeat 100px 0px;
-        background-size: 35px, 50px;
-        background-color: #FFBF47;
-    }
-
-    .slide-block._y-bucket .slide__name {
-        padding-right: 15px;
-    }
-
-    .slide-block._b-drill {
-        background-position-y: 35px;
-        background-position-x: 50px;
-        background-size: 3.5em;
-
-    }
-
-    .slide-block._p-tractor {
-        background-position-y: 35px;
-        background-position-x: 50px;
-        background-size: 3.5em;
-    }
-
-    .slide-block._g-cart {
-        background-position-y: 30px;
-        background-position-x: 50px;
-        background-size: 45px;
-    }
-
-    .slide-block._y-car {
-        background-position-y: 35px;
-        background-position-x: 50px;
-        background-size: 3.5em;
-    }*/
-
     .content-header {
         padding: 0 10px;
     }
@@ -2548,6 +2507,73 @@ ul.cat-list {
 
 
 
+
+    .service__top {}
+
+    .main-title._service {
+        font-weight: 400;
+        font-size: 30px;
+    }
+
+    .text._service {
+        text-align: center;
+    }
+
+    .service .text {
+        font-size: 15px;
+    }
+
+    .service__bottom {
+        flex-direction: column;
+    }
+
+    .nav-tabs {
+        flex-direction: row;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .tab-img {}
+
+    .tab-pane {
+        width: auto;
+        height: auto;
+        margin: 0;
+    }
+
+    .text._tab {
+        padding-left: 10px;
+    }
+
+    .btn._send {
+        margin-left: 10px;
+    }
+
+
+
+
+
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about .text {
+        text-align: center;
+    }
+
+    .about__company {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .about__contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
 
 
@@ -2659,5 +2685,30 @@ ul.cat-list {
         font-size: 1em;
         line-height: 1em;
         text-align: center;
+    }
+
+
+
+
+
+
+    .popup{
+        width: 90%;
+    }
+
+    .popup__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .popup__textarea{
+        width: 100%;
+        min-width: 220px;
+    }
+
+    .popup__main{
+        height: auto;
+        padding: 20px;
     }
 }
