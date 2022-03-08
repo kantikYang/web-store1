@@ -1,5 +1,5 @@
 
-const swiper = new Swiper('.swiper', {
+/*const swiper = new Swiper('.swiper', {
   speed: 400,
   spaceBetween: 0,
   navigation: {
@@ -61,7 +61,7 @@ document.addEventListener('click', (e) => {
     document.body.style.overflow = 'visible';
   }
 });
-
+*/
 
 let navBg = document.querySelector('.nav__wrapper');
 let nav = document.querySelector('.nav__list');

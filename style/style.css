@@ -57,6 +57,14 @@ textarea {
     font-family: inherit;
 }
 
+
+
+
+
+
+
+
+
 body {
     font-family: 'Cuprum', sans-serif;
     /*min-width: 940px;*/
@@ -66,6 +74,10 @@ body {
     max-width: 940px;
     margin: 0 auto;
     width: 100%;
+}
+
+.hidden {
+    display: none;
 }
 
 
@@ -496,6 +508,9 @@ ul.nav__list li:active {
     color: rgba(255, 255, 255, 0.5);
 }
 
+ul.nav__list .nav__footer {
+    display: none;
+}
 
 
 
@@ -672,11 +687,6 @@ ul.nav__list li:active {
 
 .slider-nav__item.active {
     background-color: #EE3643;
-}
-
-.hidden {
-    /*display: none;*/
-    visibility: hidden;
 }
 
 .content-header {
@@ -1326,7 +1336,7 @@ ul.info-board__list._yellow li:active {
 .sorting {
     display: flex;
     align-items: center;
-    width: 100%;
+
     background: #F7F3EC;
     padding-left: 19px;
 }
@@ -1387,7 +1397,9 @@ ul.info-board__list._yellow li:active {
     margin-top: 10px;
 }
 
-.price-range {}
+.filter-close {
+    display: none;
+}
 
 .filter__title {
     font-style: normal;
@@ -1586,9 +1598,9 @@ ul.cat-list {
 
 .about-catalog {
     background: #f1f5f7;
-    height: 261px;
-    padding: 64px 0 67px 0;
+    padding: 64px 20px;
 }
+
 
 .text._perf {
     margin-top: 25px;
@@ -1810,6 +1822,7 @@ ul.cat-list {
     .header__about {
         justify-content: space-around;
         align-items: center;
+        flex-wrap: wrap;
     }
 
     .descrip {
@@ -1825,6 +1838,7 @@ ul.cat-list {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin: 30px 0;
     }
 
     .phone-number {
@@ -1841,6 +1855,10 @@ ul.cat-list {
         font-size: 1em;
     }
 
+    .profile {
+        margin: 0 10px;
+
+    }
 
     .logon {
         flex-direction: column;
@@ -1922,7 +1940,14 @@ ul.cat-list {
         margin-left: 0;
     }
 
+    ul.nav__list .nav__footer {
+        display: flex;
+    }
 
+    .contact._nav {
+        margin: 0;
+        width: 150px;
+    }
 
 
 
@@ -1999,9 +2024,7 @@ ul.cat-list {
 
 
 
-    .service__top {}
 
-    .service__bottom {}
 
     .tab-img {
         position: static;
@@ -2121,15 +2144,111 @@ ul.cat-list {
         line-height: 1em;
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+    .catalog__top {
+        display: flex;
+        height: auto;
+        width: 100%;
+        justify-content: space-evenly;
+        background: #F7F3EC;
+        padding-left: 5px;
+    }
+
+    .form-filter {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 60px;
+        background-color: #fff;
+        display: none;
+    }
+
+    .form-filter.active {
+        display: flex;
+    }
+
+    .filter-close {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        /*color: red;
+        font-size: 25px;*/
+        width: 30px;
+    }
+
+    .filter-btn {
+        padding: 5px 15px;
+        background-color: #8ED78F;
+        border-radius: 15px;
+        border: 2px solid #fff;
+    }
+
+    .filter__name {
+        margin: 0;
+        min-width: auto;
+    }
+
+    .sorting {
+        display: flex;
+        position: relative;
+        /*  flex-direction: row-reverse;*/
+        padding: 0;
+    }
+
+    .sorting__name {
+        display: flex;
+        flex-direction: column;
+        background-color: #C5C5C5;
+        width: auto;
+        position: absolute;
+        top: 40px;
+        padding: 15px;
+        border-radius: 15px;
+        display: none;
+    }
+
+    .sorting__name.active {
+        display: flex;
+    }
+
+    .up-down {
+        margin-left: 15px;
+    }
+
+    .sorting__value {
+        border: 0;
+    }
+
+    .sorting__title {
+        width: auto;
+        padding: 5px 15px;
+        background-color: #8ED78F;
+        border-radius: 15px;
+        border: 2px solid #fff;
+    }
+
+    .page {
+        justify-content: center;
+    }
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -2361,7 +2480,6 @@ ul.cat-list {
 
     .logon {
         width: 55%;
-        margin-top: 30px;
         height: auto;
         flex-direction: column;
     }
@@ -2692,7 +2810,7 @@ ul.cat-list {
 
 
 
-    .popup{
+    .popup {
         width: 90%;
     }
 
@@ -2702,13 +2820,38 @@ ul.cat-list {
         align-items: center;
     }
 
-    .popup__textarea{
+    .popup__textarea {
         width: 100%;
         min-width: 220px;
     }
 
-    .popup__main{
+    .popup__main {
         height: auto;
         padding: 20px;
+    }
+
+
+
+
+
+
+
+
+
+
+    .sorting__title {
+        /*display: none;*/
+    }
+
+    .svg-arrow {
+        margin: 0 8px;
+    }
+
+    .about-catalog .main-title {
+        font-size: 21px;
+    }
+
+    .text._perf {
+        text-align: center;
     }
 }
