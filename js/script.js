@@ -1,19 +1,24 @@
 
-/*const swiper = new Swiper('.swiper', {
-  speed: 400,
-  spaceBetween: 0,
-  navigation: {
-    nextEl: '.arrow-btn__next',
-    prevEl: '.arrow-btn__back'
-  },
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-    clickable: true,
-  },
-});
+//слайдер
+if (document.querySelector(".swiper")) {
+  const swiper = new Swiper('.swiper', {
+    speed: 400,
+    spaceBetween: 0,
+    navigation: {
+      nextEl: '.arrow-btn__next',
+      prevEl: '.arrow-btn__back'
+    },
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+  });
+}
 
+
+//табы
 var tabNavs = document.querySelectorAll(".nav-tab");
 var tabPanes = document.querySelectorAll(".tab-pane");
 
@@ -37,11 +42,13 @@ for (var i = 0; i < tabNavs.length; i++) {
   });
 }
 
+
+
+//попап форма обратной связи
 let popupBg = document.querySelector('.popup-bg');
 let popup = document.querySelector('.popup');
 let openPopupButtons = document.querySelectorAll('.open-popup');
 let closePopupButton = document.querySelector('.close-popup');
-
 
 openPopupButtons.forEach((button) => {
   button.addEventListener('click', (e) => {
@@ -51,22 +58,27 @@ openPopupButtons.forEach((button) => {
     document.body.style.overflow = 'hidden';
   })
 });
-closePopupButton.addEventListener('click', () => {
-  popupBg.classList.remove('active');
-  document.body.style.overflow = 'visible';
-});
-document.addEventListener('click', (e) => {
-  if (e.target === popupBg) {
+if (document.querySelector(".open-popup")) {
+  closePopupButton.addEventListener('click', () => {
     popupBg.classList.remove('active');
     document.body.style.overflow = 'visible';
-  }
-});
-*/
+  });
 
+  document.addEventListener('click', (e) => {
+    if (e.target === popupBg) {
+      popupBg.classList.remove('active');
+      document.body.style.overflow = 'visible';
+    }
+  });
+}
+
+
+
+
+//попап нав меню
 let navBg = document.querySelector('.nav__wrapper');
 let nav = document.querySelector('.nav__list');
 let openNav = document.querySelector('.burger-btn');
-//let closeNav = document.querySelector('.close-nav');
 let navMenu = document.querySelector('.nav__list')
 
 
@@ -75,7 +87,7 @@ document.querySelector(".burger-btn").style.transition = "0.2s all";
 
 navBg.addEventListener('click', (event) => {
   console.log(event.target);
-  if /*((event.target == openNav) || */(event.target == navBg) {
+  if (event.target == navBg) {
     navBg.classList.remove('active');
     openNav.classList.toggle('active');
     navMenu.classList.remove('active');
@@ -90,3 +102,30 @@ openNav.addEventListener('click', () => {
   /*document.body.style.overflow = 'hidden';*/
 })
 
+
+
+
+//фильтр и сортировка
+let closeFilter = document.querySelector('.filter-close');
+let openFilter = document.querySelector('.filter-btn');
+let filter = document.querySelector('.form-filter');
+
+if (document.querySelector(".filter-btn")) {
+  openFilter.addEventListener('click', () => {
+    filter.classList.add('active');
+  })
+
+  closeFilter.addEventListener('click', () => {
+    filter.classList.remove('active');
+  })
+}
+
+
+let sortingValue = document.querySelector('.sorting__name ');
+let openSort = document.querySelector('.sorting__title ')
+
+if (document.querySelector(".sorting__title")) {
+  openSort.addEventListener('click', () => {
+    sortingValue.classList.toggle('active');
+  })
+}
